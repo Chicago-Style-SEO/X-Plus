@@ -1,6 +1,25 @@
 // Grid settings
-$main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary: #00A1AF;
+$brand-dark: #0A3542;
+$brand-alert: #9F2214;
+$brand-alternate: #E28947;
+$brand-white: #FFFFFF;
+$brand-mid-gray: #121212;
+$brand-light-gray: #F1F1F1;
+
+// Fonts
+@font-face {
+  font-family: 'HelveticaNeue-CondensedBold';
+  src: url('../fonts/HelveticaNeue-CondensedBold');
+  src: url('../fonts/HelveticaNeue-CondensedBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+  url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff'),
+  url('../fonts/HelveticaNeue-CondensedBold.svg') format('svg');
+}
+
+$fontPrimary: 'HelveticaNeue-CondensedBold', Helvetica, sans-serif;
+$fontSecondary: 'acumin-pro-condensed', sans-serif;

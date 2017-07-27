@@ -1,1 +1,131 @@
+html, body{
+  font-family: $fontSecondary;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 28px;
+  overflow-x: hidden;
+}
 
+h1{
+  font-family: $fontPrimary;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+h2{
+  font-family: $fontPrimary;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h3{
+  font-family: $fontPrimary;
+  font-size: 26px;
+  line-height: 34px;
+}
+
+h4{
+  font-family: $fontPrimary;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h5{
+  font-family: $fontPrimary;
+  font-size: 21px;
+  line-height: 28x;
+}
+
+h6{
+  font-family: $fontPrimary;
+  font-size: 18px;
+  line-height: 24x;
+}
+
+a{
+  color: $brand-primary;
+  transition: all .3s ease;
+
+  &:visited{
+    color: $brand-dark;
+  }
+
+  &:hover{
+    color: $brand-alert;
+  }
+}
+
+
+#breadcrumbs{
+  list-style:none;
+  margin:0;
+  overflow:hidden;
+  width: 100%;
+  background-color: $brand-light-gray;
+  height: 48px;
+  margin-bottom: 36px;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+
+    strong{
+      color: $brand-primary;
+    }
+  }
+
+  .separator {
+    font-size: 18px;
+    font-weight: 100;
+    color: #ccc;
+  }
+}
+
+blockquote{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 60px;
+  text-align: center;
+
+  footer{
+    border-top: 2px solid $brand-primary;
+    padding-top: 10px;
+    color: $brand-dark;
+  }
+}
+
+blockquote:before, blockquote:after {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 100px;
+  line-height: 1;
+}
+blockquote:before {
+  top: 0;
+  left: 0;
+  content: "\201C";
+  color: $brand-dark;
+}
+
+/* TEAM MEMBERS */
+
+.teamMember{
+  text-align: center;
+
+  img{
+    border-radius: 200px;
+    border: 3px solid $brand-primary;
+    transition: all .3s ease;
+  }
+
+  &:hover{
+    img{
+      border: 3px solid $brand-alternate;
+    }
+  }
+}

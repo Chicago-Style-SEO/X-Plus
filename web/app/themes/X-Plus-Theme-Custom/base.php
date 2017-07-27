@@ -18,10 +18,17 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap container" role="document">
+    <!-- hero image element - MAKE IN ACF -->
+    <!-- breadcrumbs, under nav when no hero -->
+    <?php global $post; if ( is_page() && $post->post_parent ) { custom_breadcrumbs(); } ?>
+    <div class="wrap" role="document">
       <div class="content row">
         <main class="main">
-          <?php include Wrapper\template_path(); ?>
+            <!-- ANYTHING INSIDE OF MAIN IS FULL WIDTH, ANTHTING INSIDE OF CONTAINER IS CONTAINED -->
+
+            <div class="container">
+                <?php include Wrapper\template_path(); ?>
+            </div>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">

@@ -1,0 +1,41 @@
+button{
+  padding: 12px 36px;
+  font-family: $fontPrimary;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  display: inline;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  background-color: $brand-dark;
+  color: $brand-white;
+  margin: 12px;
+
+  &:hover{
+    color: $brand-dark;
+    background-color: $brand-light-gray;
+    cursor: pointer;
+  }
+}
+
+.primary-btn{
+  @extend button;
+}
+
+.secondary-btn{
+  background-color: $brand-primary;
+
+  &:hover{
+    background-color: $brand-dark;
+    color: $brand-white;
+  }
+}
+
+.alternate-btn{
+  background-color: $brand-alternate;
+
+  &:hover{
+    background-color: $brand-primary;
+    color: $brand-white;
+  }
+}
