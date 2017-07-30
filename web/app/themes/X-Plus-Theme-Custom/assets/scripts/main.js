@@ -75,3 +75,24 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+/* Team Member Image Hover Effect */
+var t = [];
+
+t[0] = "http://www.gossipnewsmagazine.com/wp-content/uploads/2016/01/game-of-thrones-jon-snow-square-w352.jpg";
+t[1] = "http://redonline.cdnds.net/main/thumbs/18834/jon-snow__square.jpg";
+
+jQuery(document).ready(function() {
+    var sourceSwap = function () {
+        var $this = jQuery(this);
+        var newSource = $this.data('alt-src');
+        $this.data('alt-src', $this.attr('src'));
+        $this.attr('src', newSource);
+    }
+
+    jQuery(function () {
+        jQuery('img.teamMember-image').hover(sourceSwap, sourceSwap);
+    });
+
+});
