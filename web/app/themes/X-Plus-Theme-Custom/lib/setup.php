@@ -90,24 +90,24 @@ function widgets_init() {
     'id'            => 'sidebar-footer-left',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
   ]);
     register_sidebar([
         'name'          => __('Footer Center', 'sage'),
         'id'            => 'sidebar-footer-center',
         'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>'
     ]);
     register_sidebar([
         'name'          => __('Footer Right', 'sage'),
         'id'            => 'sidebar-footer-right',
         'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>'
     ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
@@ -124,6 +124,8 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+      is_singular( 'team' ),
+      is_archive( 'team' ),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

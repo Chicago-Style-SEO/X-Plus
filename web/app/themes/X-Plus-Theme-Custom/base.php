@@ -27,6 +27,7 @@ use Roots\Sage\Wrapper;
             <!-- ANYTHING INSIDE OF MAIN IS FULL WIDTH, ANTHTING INSIDE OF CONTAINER IS CONTAINED -->
 
             <!-- hero image element - MAKE H1 and IMAGE EDITABLE IN ACF -->
+
             <!-- IF SEARCH MODULE ENABLED OR IF HOME PAGE -->
             <?php if ( is_front_page()) : ?>
             <div class="searchModule">
@@ -56,14 +57,49 @@ use Roots\Sage\Wrapper;
                         </div>
                     </form>
                 </div>
-<!--                <img src="--><?//= get_template_directory_uri(); ?><!--/dist/images/home-lifestyle.jpg" class="searchModule-image">-->
             </div>
             <? endif ?>
             <!-- end hero image element -->
 
+            <!-- ANYTHING WITHIN CONTAINER IS CONTAINED AND NOT FULL WIDTH -->
             <div class="container">
                 <?php include Wrapper\template_path(); ?>
             </div>
+            <!-- END CONTAINER -->
+
+            <!-- SOLO SEARCH MODULE -- NO IMAGE -->
+            <?php if ( is_front_page()) : ?> <!-- REMOVE/REFINE THIS -->
+            <div class="searchModule--solo">
+                <div class="searchModule-formContainer">
+                    <form action="" class="container">
+                        <p class="searchModule--solo--label">Refine your search:</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="form-location">Location</label>
+                                <input type="text" id="form-location">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="form-min-price">Min Price</label>
+                                <input type="text" id="form-min-price">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="form-max-price">Max Price</label>
+                                <input type="text" id="form-max-price">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="form-units">&#35; of Units </label>
+                                <input type="text" id="form-units">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="xbutton primary-btn">Search <i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <?php endif; ?>
+            <!-- END SOLO SEARCH MODULE -->
+
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">

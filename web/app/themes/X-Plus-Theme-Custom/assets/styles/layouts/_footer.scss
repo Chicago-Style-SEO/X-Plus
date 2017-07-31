@@ -1,0 +1,40 @@
+footer.content-info{
+  background-color: $brand-dark;
+  color: $brand-light-gray;
+  padding-top: 60px;
+  padding-bottom: 36px;
+
+  h4{
+    color: $brand-white;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 0;
+
+    li{
+      a{
+        border-bottom: 2px solid transparent;
+        line-height: 34px;
+        color: $brand-light-gray;
+
+        &:hover{
+          border-bottom: 2px solid $brand-primary;
+          text-decoration: none;
+          color: $brand-white;
+        }
+
+        &:visited{
+          color: $brand-light-gray;
+        }
+      }
+    }
+
+    .page_item_has_children{
+
+      .children{
+        padding-left: 12px;
+      }
+    }
+  }
+}
