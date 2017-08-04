@@ -203,3 +203,53 @@ blockquote:before {
     }
   }
 }
+
+/* END LISTING STYLES */
+
+/* TESTIMONIAL STYLES */
+.testimonialsModule{
+  width: 100%;
+  background-color: $brand-primary;
+  padding: 60px 0px;
+  text-align: center;
+
+  h2{
+    color: $brand-white;
+  }
+
+  .testimonial{
+
+    p.quote{
+      color: $brand-white;
+    }
+
+    p.quoteAuthor{
+      color: $brand-white;
+      font-weight: bold;
+    }
+  }
+
+  .slick-next{
+    right: 100px;
+    top: 20%;
+    z-index: 10000;
+
+    &::before{
+      font-size: 72px;
+      content: "\f105";
+      font-family: FontAwesome;
+    }
+  }
+  .slick-prev{
+    left: 100px;
+    top: 20%;
+    z-index: 10000;
+    &::before{
+      font-size: 72px;
+      content: "\f104";
+      font-family: FontAwesome;
+    }
+  }
+}
+
+/* END TESTIMONIAL STYLES */

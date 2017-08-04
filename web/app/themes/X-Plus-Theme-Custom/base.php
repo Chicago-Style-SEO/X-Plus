@@ -66,6 +66,29 @@ use Roots\Sage\Wrapper;
                 <?php include Wrapper\template_path(); ?>
             </div>
             <!-- END CONTAINER -->
+            <!-- TESTIMONIALS SECTION -->
+            <div class="testimonialsModule">
+                <h2>WHAT OUR CLIENTS SAY</h2>
+                <div class="slider-container">
+                    <div class="testimonial">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <p class="quote">Weston went above and beyond to ensure that I not only found a condo but that I found the right condo for me. He was punctual, friendly, thorough, and always had my best interests in mind. I could not have asked for more in realtor. I would highly recommend Weston to anyone in the market to purchase a new home or condo, you will be in excellent hands!</p>
+                                <p class="quoteAuthor">-April, River North</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <p class="quote">Weston went above and beyond to ensure that I not only found a condo but that I found the right condo for me. He was punctual, friendly, thorough, and always had my best interests in mind. I could not have asked for more in realtor. I would highly recommend Weston to anyone in the market to purchase a new home or condo, you will be in excellent hands!</p>
+                                <p class="quoteAuthor">-April, River North</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TESTIMONIALS SECTION -->
 
             <!-- SOLO SEARCH MODULE -- NO IMAGE -->
             <?php if ( is_front_page()) : ?> <!-- REMOVE/REFINE THIS -->
@@ -113,5 +136,14 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/footer');
       wp_footer();
     ?>
+    <!-- IF TESTIMONIALS EXIST OR PAGE THAT NEEDS SLIDER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script>
+        jQuery('.slider-container').slick({
+            infinite: true,
+            slidesToShow: 1
+        });
+    </script>
+    <!-- END -->
   </body>
 </html>
