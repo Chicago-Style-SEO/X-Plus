@@ -253,3 +253,32 @@ blockquote:before {
 }
 
 /* END TESTIMONIAL STYLES */
+
+/* EXPLORE NEARBY NEIGHBORHOODS */
+
+.nearbyNeighborhoods{
+  padding: 60px 0px 20px 0px;
+
+  img{
+    width: 100%;
+    position: relative;
+  }
+
+  .nearbyModule-text{
+    position: relative;
+    top: -40px;
+    max-width: 360px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba($brand-dark, .7);
+    padding-left: 20px;
+    padding-top: 4px;
+    font-weight: bold;
+
+    .location{
+      color: $brand-white;
+    }
+  }
+}
+
+/* END EXPLORE NEARBY STYLES */

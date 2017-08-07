@@ -90,6 +90,34 @@ use Roots\Sage\Wrapper;
             </div>
             <!-- END TESTIMONIALS SECTION -->
 
+            <!-- EXPLORE NEARBY NEIGHBORHOODS - IMAGE WITH TEXT OVERLAY BOTTOM MODULE -->
+            <?php if ( is_front_page()) : ?>
+                <div class="nearbyNeighborhoods container">
+                    <h4>Explore Nearby Neighborhoods</h4>
+                    <div class="row">
+                        <div class="col-md-4 nearbyModule">
+                            <img src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Nearby Neighborhoods X-Plus Real Estate">
+                            <div class="nearbyModule-text">
+                                <p class="location">Lincoln Park</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 nearbyModule">
+                            <img src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Nearby Neighborhoods X-Plus Real Estate">
+                            <div class="nearbyModule-text">
+                                <p class="location">Lincoln Square</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 nearbyModule">
+                            <img src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Nearby Neighborhoods X-Plus Real Estate">
+                            <div class="nearbyModule-text">
+                                <p class="location">North Center</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <? endif; ?>
+            <!-- END EXPLORE NEARBY NEIGHBORHOODS -->
+
             <!-- SOLO SEARCH MODULE -- NO IMAGE -->
             <?php if ( is_front_page()) : ?> <!-- REMOVE/REFINE THIS -->
             <div class="searchModule--solo">
