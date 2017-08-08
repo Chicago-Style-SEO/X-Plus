@@ -56,10 +56,36 @@ a{
   }
 }
 
-input{
-  padding: 6px;
+.threeColumnHome{
+  text-align: center;
+
+  h3{
+    color: $brand-dark;
+  }
 }
 
+.align-center{
+  width: 100%;
+  text-align: center;
+}
+
+input{
+  padding: 6px;
+  font-family: $fontPrimary;
+}
+
+.home{
+  .page-header{
+    display: none;
+  }
+}
+
+.container{
+
+  .page-header{
+    margin: 60px 0px 0px 0px;
+  }
+}
 
 #breadcrumbs{
   list-style:none;

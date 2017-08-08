@@ -1,0 +1,308 @@
+.simplePropertySearch{
+  width: 100%;
+  padding: 60px 0px;
+  background-color: $brand-dark;
+
+  h3{
+    text-align: center;
+    color: $brand-white;
+    margin-bottom: 24px;
+  }
+
+  .propertySearchFilter--simple:not(:last-child){
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease;
+    text-align: center;
+
+    i{
+      color: $brand-primary;
+      position: relative;
+      top: 12px;
+      left: -12px;
+      border-color: transparent;
+      color: $brand-white;
+      transition: all .3s ease;
+
+      &:hover{
+        background-color: transparent;
+      }
+    }
+
+    .iconText{
+      color: $brand-white;
+      margin-left: -12px;
+      position: relative;
+      top: 20px;
+      transition: all .3s ease;
+    }
+
+    &:hover{
+      border-bottom: 2px solid $brand-primary;
+      cursor: pointer;
+    }
+
+    &.active{
+      border-bottom: 2px solid $brand-primary;
+      cursor: pointer;
+    }
+  }
+
+  .propertySearchFilter--simple{
+    input{
+      height: 50px;
+      margin-top: 12px;
+      border-radius: 0px;
+      border: 1px solid $brand-primary;
+    }
+    button{
+      @extend .alternate-btn;
+      color: $brand-white;
+      border: 0;
+      height: 50px;
+    }
+  }
+}
+
+.advancedPropertySearch{
+  width: 100%;
+  background-color: $brand-primary;
+  max-height: 0px;
+  transition: all 1s ease;
+  overflow: hidden;
+
+  &.active{
+    padding: 48px 0px;
+    max-height: 100%;
+  }
+
+  h3{
+    color: $brand-dark;
+  }
+
+  .custom-control-description{
+    color: $brand-white;
+  }
+
+  .custom-checkbox{
+    width: 100%;
+
+    .custom-control-indicator{
+      background-color: transparent;
+      border: 2px solid $brand-white;
+    }
+    .custom-control-input:checked~.custom-control-indicator{
+      background-color: $brand-dark;
+    }
+  }
+
+  .rangeToText{
+    margin: 10px;
+  }
+
+  .rangeBedsText, label{
+    font-weight: bold;
+    color: $brand-white;
+  }
+
+  .btn-group{
+    margin-bottom: 24px;
+  }
+
+  .form-group{
+    padding-left: 10px;
+  }
+
+  #listingStatusLabel{
+    padding-left: 10px;
+  }
+  #listingStatus{
+    margin-left: 10px;
+  }
+
+  .reducedPrice{
+    position: relative;
+    left: 10px;
+    margin-top: 24px;
+
+    .custom-control.custom-checkbox{
+      position: relative;
+      top: 8px;
+    }
+  }
+
+  .resultsCountText{
+    width: 100%;
+
+    p{
+      color: $brand-dark;
+      font-weight: bold;
+      margin-top: 48px;
+    }
+  }
+
+  .submitAdvancedSearch{
+
+    button{
+      width: 100%;
+      @extend .primary-btn;
+
+      &:hover{
+        background-color: $brand-alternate;
+        color: $white;
+      }
+    }
+  }
+
+  #clearAdvancedSearch{
+    width: 100%;
+    text-align: center;
+
+    span{
+      color: $brand-white;
+
+      &:hover{
+      cursor: pointer;
+      color: $brand-dark;
+      }
+    }
+
+  }
+
+  #closeAndClearAdvancedSearch{
+
+    i{
+      color: $brand-white;
+      font-size: 50px;
+      position: absolute;
+      top: -48px;
+      right: 12px;
+    }
+  }
+
+}
+
+.page-template-template-property-search{
+
+  .page-header{
+    display: none;
+  }
+
+  main{
+    padding-bottom: 60px;
+  }
+
+  .listing-details{
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+  }
+
+  .listing{
+    margin: 12px 0px;
+  }
+
+  .searchResultsTitle{
+    margin: 36px 0px;
+    color: $brand-primary;
+  }
+
+  #selectFilterMLS{
+    margin: 36px 0px;
+    float: right;
+  }
+}
+
+.rangeValues{
+  position: absolute;
+  width: 100%;
+  top: 48px;
+  left: 0px;
+  color: $brand-dark;
+}
+
+
+@mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:20px, $input-border-radius:14px) {
+  position: relative;
+  width: $width;
+  height: $height;
+  float: $float;
+  text-align: center;
+
+  input[type="range"] {
+    pointer-events: none;
+    position: absolute;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: $input-border-radius;
+    background: $input-bg-color;
+    box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
+    -webkit-box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
+    overflow: hidden;
+    left: 0;
+    top: $input-top;
+    width: $width;
+    outline: none;
+    height: $input-height;
+    margin: 0;
+    padding: 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    -webkit-appearance: none;
+    width: $input-height;
+    height: $input-height;
+    border: none;
+    border-radius: $input-border-radius;
+    background: $brand-dark;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: $input-height;
+    height: $input-height;
+    border: none;
+    border-radius: $input-border-radius;
+    background: $brand-dark;
+  }
+
+  input[type="range"]::-ms-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -ms-appearance: none;
+    width: $input-height;
+    height: $input-height;
+    border-radius: $input-border-radius;
+    border: 0;
+    background: $brand-dark;
+  }
+
+  input[type=range]::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+  }
+
+  input[type=range]:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+  }
+
+  input[type=range]::-moz-focus-outer {
+    border: 0;
+  }
+}
+
+section.range-slider {
+  @include range-slider(175px, 70px, 18px, $brand-white, $brand-white, left);
+}

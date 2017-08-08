@@ -85,10 +85,55 @@ jQuery(document).ready(function() {
         var newSource = $this.data('alt-src');
         $this.data('alt-src', $this.attr('src'));
         $this.attr('src', newSource);
-    }
+    };
 
     jQuery(function () {
         jQuery('img.teamMember-image').hover(sourceSwap, sourceSwap);
     });
 
+    /* RANGE SLIDER */
+    function getVals(){
+        // Get slider values
+        var parent = this.parentNode;
+        var slides = parent.getElementsByTagName("input");
+        var slide1 = parseFloat( slides[0].value );
+        var slide2 = parseFloat( slides[1].value );
+        // Neither slider will clip the other, so make sure we determine which is larger
+        if( slide1 > slide2 ){ var tmp = slide2; slide2 = slide1; slide1 = tmp; }
+
+        var displayElement = parent.getElementsByClassName("rangeValues")[0];
+        displayElement.innerHTML = slide1 + "sq ft - " + slide2 + "sq ft";
+    }
+
+    window.onload = function(){
+        // Initialize Sliders
+        var sliderSections = document.getElementsByClassName("range-slider");
+        for( var x = 0; x < sliderSections.length; x++ ){
+            var sliders = sliderSections[x].getElementsByTagName("input");
+            for( var y = 0; y < sliders.length; y++ ){
+                if( sliders[y].type ==="range" ){
+                    sliders[y].oninput = getVals;
+                    // Manually trigger event first time to display values
+                    sliders[y].oninput();
+                }
+            }
+        }
+    }
+
 });
+
+/* Advanced search menu */
+jQuery(".propertySearchFilter--simple").click(function(){
+    jQuery(".propertySearchFilter--simple").removeClass("active");
+    jQuery(this).toggleClass("active");
+
+    if(jQuery(this).is("#advancedSearchTrigger")){
+        jQuery(".advancedPropertySearch").addClass("active");
+    }
+});
+
+jQuery("#closeAndClearAdvancedSearch").click(function(){
+    jQuery(".propertySearchFilter--simple").removeClass("active");
+    jQuery(".advancedPropertySearch").removeClass("active");
+});
+

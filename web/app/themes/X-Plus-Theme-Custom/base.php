@@ -29,7 +29,7 @@ use Roots\Sage\Wrapper;
             <!-- hero image element - MAKE H1 and IMAGE EDITABLE IN ACF -->
 
             <!-- IF SEARCH MODULE ENABLED OR IF HOME PAGE -->
-            <?php if ( is_front_page()) : ?>
+            <?php if ( is_front_page() || is_page( 'Style Guide' )) : ?>
             <div class="searchModule">
                 <h1 class="searchModule-title">Find the home or investment property you’ve been looking for!</h1>
                 <div class="searchModule-formContainer">
@@ -67,6 +67,7 @@ use Roots\Sage\Wrapper;
             </div>
             <!-- END CONTAINER -->
             <!-- TESTIMONIALS SECTION -->
+            <?php if ( is_front_page() || is_page( 'Style Guide' )) : ?>
             <div class="testimonialsModule">
                 <h2>WHAT OUR CLIENTS SAY</h2>
                 <div class="slider-container">
@@ -88,10 +89,11 @@ use Roots\Sage\Wrapper;
                     </div>
                 </div>
             </div>
+            <? endif; ?>
             <!-- END TESTIMONIALS SECTION -->
 
             <!-- EXPLORE NEARBY NEIGHBORHOODS - IMAGE WITH TEXT OVERLAY BOTTOM MODULE -->
-            <?php if ( is_front_page()) : ?>
+            <?php if ( is_page( 'Style Guide' )) : ?>
                 <div class="nearbyNeighborhoods container">
                     <h4>Explore Nearby Neighborhoods</h4>
                     <div class="row">
@@ -119,7 +121,7 @@ use Roots\Sage\Wrapper;
             <!-- END EXPLORE NEARBY NEIGHBORHOODS -->
 
             <!-- SOLO SEARCH MODULE -- NO IMAGE -->
-            <?php if ( is_front_page()) : ?> <!-- REMOVE/REFINE THIS -->
+            <?php if ( is_page( 'Style Guide' )) : ?> <!-- REMOVE/REFINE THIS -->
             <div class="searchModule--solo">
                 <div class="searchModule-formContainer">
                     <form action="" class="container">
