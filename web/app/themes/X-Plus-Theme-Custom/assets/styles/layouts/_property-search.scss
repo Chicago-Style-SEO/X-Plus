@@ -199,6 +199,15 @@
 
   .listing{
     margin: 12px 0px;
+    width: 100%;
+  }
+
+  .listing-image{
+
+    img{
+      object-fit: contain;
+      width: 100%;
+    }
   }
 
   .searchResultsTitle{
@@ -219,6 +228,101 @@
   left: 0px;
   color: $brand-dark;
 }
+
+/* LISTING STYLES */
+
+.listing{
+  box-shadow: 0px 0px 4px darken($brand-light-gray, 50%);
+  position: relative;
+  text-align: center;
+
+  .listing-price{
+    background-color: $brand-white;
+    box-shadow: 0px 0px 2px darken($brand-light-gray, 50%);
+    border-bottom: 2px solid $brand-alert;
+    text-align: center;
+    width: 150px;
+    padding: 12px;
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    color: $brand-primary;
+
+    @media (max-width: $screen-md-max) {
+      left: 25%;
+      top: 100px;
+    }
+    @media (max-width: $screen-sm-max) {
+      left: 0%;
+      top: 80px;
+      width: 100%;
+      border-bottom: 2px solid $brand-alert;
+      box-shadow: none;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      left: 0%;
+      top: 150px;
+      width: 100%;
+      border-bottom: 2px solid $brand-alert;
+      box-shadow: none;
+    }
+  }
+
+  .listing-details{
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media (max-width: $screen-sm-min) {
+      padding-top: 60px;
+    }
+  }
+
+  .listing-viewListing{
+    position: absolute;
+    bottom: -5px;
+    left: 125px;
+    color: $brand-primary;
+
+    @media (max-width: $screen-md-max) {
+      left: 32%;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      left: 28%;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      left: 39%;
+    }
+
+    i{
+      width: 12px;
+      height: 12px;
+      border: none;
+      position: relative;
+      top: -8px;
+      left: -6px;
+      font-size: 16px;
+
+      &:hover{
+        background-color: transparent;
+        color: $brand-alert;
+      }
+    }
+
+    &:hover{
+      color: $brand-alert;
+
+      i{
+        color: $brand-alert;
+      }
+    }
+  }
+}
+
+/* END LISTING STYLES */
+
 
 
 @mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:20px, $input-border-radius:14px) {

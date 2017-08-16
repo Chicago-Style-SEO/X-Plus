@@ -24,6 +24,14 @@
   background-image: url("../images/home-lifestyle.jpg"); //CHANGE THIS TO ACF UPLOAD!!!
   background-size: cover;
 
+  @media (max-width: $screen-md-max){
+    height: 600px;
+  }
+
+  @media (max-width: $screen-sm-max){
+    height: 700px;
+  }
+
   .searchModule-title{
     position: absolute;
     top: 0px;
@@ -94,6 +102,10 @@
       right: -6px;
       font-size: 18px;
 
+      @media (max-width: $screen-md-max){
+        display: none;
+      }
+
       &:hover{
         color: $brand-dark;
         background-color: transparent;
@@ -109,6 +121,10 @@
   background-color: $brand-primary;
   margin-bottom: 0px;
   margin-top: 60px;
+
+  @media (max-width: $screen-sm-min){
+    height: 550px;
+  }
 
   .searchModule-formContainer{
     width: 100%;

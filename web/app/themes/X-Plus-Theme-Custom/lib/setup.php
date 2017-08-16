@@ -126,6 +126,7 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
       is_page_template('templates/template-property-search.php'),
       is_page( 'Style Guide' ),
+      is_page_template( 'templates/template-property-listing.php' ),
       is_singular( 'team' ),
       is_archive( 'team' ),
   ]);

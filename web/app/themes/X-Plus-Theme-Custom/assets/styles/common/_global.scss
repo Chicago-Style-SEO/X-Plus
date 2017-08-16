@@ -87,14 +87,25 @@ input{
   }
 }
 
+.sidebar-primary .wrap{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.xp-breadcrums{
+  width: 100%;
+  height: inherit;
+  background-color: $brand-light-gray;
+}
+
 #breadcrumbs{
   list-style:none;
   margin:0;
   overflow:hidden;
+  max-width: 1140px;
   width: 100%;
-  background-color: $brand-light-gray;
   height: 48px;
-  margin-bottom: 36px;
+  margin: 0 auto 36px auto;
 
   li {
     display: inline-block;
@@ -174,63 +185,6 @@ blockquote:before {
 
 /* END ICONS */
 
-/* LISTING STYLES */
-
-.listing{
-  box-shadow: 0px 0px 4px darken($brand-light-gray, 50%);
-  position: relative;
-  text-align: center;
-
-  .listing-price{
-    background-color: $brand-white;
-    box-shadow: 0px 0px 2px darken($brand-light-gray, 50%);
-    border-bottom: 2px solid $brand-alert;
-    text-align: center;
-    width: 150px;
-    padding: 12px;
-    position: absolute;
-    top: 130px;
-    left: 100px;
-    color: $brand-primary;
-  }
-
-  .listing-details{
-    padding-top: 12px;
-    padding-bottom: 24px;
-  }
-
-  .listing-viewListing{
-    position: absolute;
-    bottom: -5px;
-    left: 125px;
-    color: $brand-primary;
-
-    i{
-      width: 12px;
-      height: 12px;
-      border: none;
-      position: relative;
-      top: -8px;
-      left: -6px;
-      font-size: 16px;
-
-      &:hover{
-        background-color: transparent;
-        color: $brand-alert;
-      }
-    }
-
-    &:hover{
-      color: $brand-alert;
-
-      i{
-        color: $brand-alert;
-      }
-    }
-  }
-}
-
-/* END LISTING STYLES */
 
 /* TESTIMONIAL STYLES */
 .testimonialsModule{
@@ -247,6 +201,10 @@ blockquote:before {
 
     p.quote{
       color: $brand-white;
+
+      @media (max-width: $screen-sm-min){
+        padding: 0px 100px;
+      }
     }
 
     p.quoteAuthor{
@@ -260,6 +218,10 @@ blockquote:before {
     top: 20%;
     z-index: 10000;
 
+    @media (max-width: $screen-sm-min){
+      right: 10px;
+    }
+
     &::before{
       font-size: 72px;
       content: "\f105";
@@ -270,6 +232,11 @@ blockquote:before {
     left: 100px;
     top: 20%;
     z-index: 10000;
+
+    @media (max-width: $screen-sm-min){
+      left: 10px;
+    }
+
     &::before{
       font-size: 72px;
       content: "\f104";
@@ -308,3 +275,41 @@ blockquote:before {
 }
 
 /* END EXPLORE NEARBY STYLES */
+
+/* FORM STYLES */
+
+.standard-form{
+  margin-top: 24px;
+
+  label{
+    width: 100%;
+    position: relative;
+    top: 5px;
+  }
+  input{
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: 300 !important;
+    font-family:$fontSecondary;
+    border: 2px solid $brand-primary;
+
+    &::placeholder{
+      font-weight: 300;
+    }
+  }
+
+  .contact-options{
+
+    input{
+      display: inline-block;
+      width: 25px;
+
+      &:nth-child(2){
+        margin-left: 36px;
+      }
+
+    }
+  }
+}
+
+/* END FORM STYLES */

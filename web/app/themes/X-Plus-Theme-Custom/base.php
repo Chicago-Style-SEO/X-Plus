@@ -24,7 +24,7 @@ use Roots\Sage\Wrapper;
     <div class="wrap" role="document">
       <div class="content row">
         <main class="main">
-            <!-- ANYTHING INSIDE OF MAIN IS FULL WIDTH, ANTHTING INSIDE OF CONTAINER IS CONTAINED -->
+            <!-- ANYTHING INSIDE OF MAIN IS FULL WIDTH, ANYTHING INSIDE OF CONTAINER IS CONTAINED -->
 
             <!-- hero image element - MAKE H1 and IMAGE EDITABLE IN ACF -->
 
@@ -52,7 +52,9 @@ use Roots\Sage\Wrapper;
                                 <input type="text" id="form-units">
                             </div>
                             <div class="col-md-3">
-                                <button type="submit" class="xbutton alternate-btn">Search <i class="fa fa-search"></i></button>
+                                <a href="/property-search/">
+                                    <button type="submit" class="xbutton alternate-btn">Search <i class="fa fa-search"></i></button>
+                                </a>
                             </div>
                         </div>
                     </form>
@@ -177,3 +179,29 @@ use Roots\Sage\Wrapper;
     <!-- END -->
   </body>
 </html>
+
+<!-- Drip -->
+<script type="text/javascript">
+    var _dcq = _dcq || [];
+    var _dcs = _dcs || {};
+    _dcs.account = '5856660';
+
+    (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript'; dc.async = true;
+        dc.src = '//tag.getdrip.com/5856660.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+    })();
+</script>
+
+<script>
+    jQuery(".subscription_details .cancel").click(function(event){
+        if (confirm('Are you sure you want to cancel this subscription?'))
+        {
+            alert('Thanks for confirming');
+        } else {
+            e.preventDefault()
+        }
+    });
+</script>

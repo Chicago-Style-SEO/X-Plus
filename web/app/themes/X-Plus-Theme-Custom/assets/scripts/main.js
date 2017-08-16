@@ -118,7 +118,7 @@ jQuery(document).ready(function() {
                 }
             }
         }
-    }
+    };
 
 });
 
@@ -135,5 +135,11 @@ jQuery(".propertySearchFilter--simple").click(function(){
 jQuery("#closeAndClearAdvancedSearch").click(function(){
     jQuery(".propertySearchFilter--simple").removeClass("active");
     jQuery(".advancedPropertySearch").removeClass("active");
+});
+
+jQuery("#mobile-nav-icons").click(function(){
+    jQuery(".nav-mobile .fa-bars").toggleClass('activated');
+    jQuery(".nav-mobile .fa-times").toggleClass('activated');
+    jQuery(".nav-mobile .mobile-nav-menu").toggleClass('activated');
 });
 

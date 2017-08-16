@@ -12,6 +12,10 @@
     height: 100px;
     width: auto;
     display: inline-block;
+
+    @media (max-width: $screen-md-max){
+      height: 60px;
+    }
   }
 
   h1{
@@ -20,6 +24,11 @@
     position: relative;
     top: 6px;
     margin-left: 24px;
+
+    @media (max-width: $screen-md-max){
+      font-size: 26px;
+      top: 6px;
+    }
   }
 }
 
@@ -30,6 +39,10 @@
   display: flex;
   width: 100%;
   z-index: 10000;
+
+  @media (max-width: $screen-md-max){
+    display: none;
+  }
 
   ul{
     width: 100%;
@@ -100,5 +113,88 @@
     .sub-menu{
       display: block;
     }
+  }
+}
+
+
+.nav-mobile{
+  display: none;
+  position: absolute;
+  right: 24px;
+
+  i{
+    color: $brand-primary;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    z-index: 128;
+    font-size: 24px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  #mobile-nav-icons{
+    z-index: 10008;
+    position: relative;
+  }
+
+  .fa-times{
+    display: none;
+    color: $brand-white;
+
+    &.activated{
+      display: block;
+    }
+  }
+
+  .fa-bars{
+    display: none;
+
+    &.activated{
+      display: block;
+    }
+  }
+
+  .mobile-nav-menu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 10002;
+    background-color: $brand-primary;
+    transition: all .7s ease;
+    padding-top: 100px;
+    box-shadow: 2px 2px 10px $brand-dark;
+
+    &.activated{
+      right: 0;
+    }
+  }
+
+  #menu-mobile-menu{
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-top: 36px;
+    padding-right: 36px;
+
+    li{
+      width: 100%;
+      display: block;
+
+      a{
+        color: $brand-white;
+        font-size: 32px;
+        line-height: 56px;
+      }
+    }
+  }
+
+
+  @media (max-width: $screen-md-max){
+    display: block;
   }
 }
